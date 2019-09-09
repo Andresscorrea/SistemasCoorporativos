@@ -50,8 +50,17 @@ public class Usuario {
 	public void setPermissoes(List<Permissao> permissoes) {
 		this.permissoes = permissoes;
 	}
-
 	
+
+	public Usuario(int id, String nome, String cpf, String email, String senha, List<Permissao> permissoes) {
+		super();
+		this.id = id;
+		Nome = nome;
+		Cpf = cpf;
+		Email = email;
+		Senha = senha;
+		this.permissoes = permissoes;
+	}
 	public Usuario() {
 		// TODO Auto-generated constructor stub
 	}
@@ -61,5 +70,7 @@ public class Usuario {
 		return "Usuario [id=" + id + ", Nome=" + Nome + ", Cpf=" + Cpf + ", Email=" + Email + ", Senha=" + Senha
 				+ ", permissoes=" + permissoes + "]";
 	}
+	
+	
 	
 }
