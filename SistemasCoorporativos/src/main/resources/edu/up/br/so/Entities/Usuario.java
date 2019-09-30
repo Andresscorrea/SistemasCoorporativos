@@ -1,9 +1,10 @@
 package edu.up.br.so.Entities;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
-import edu.up.br.so.Entities.Permissao;
+import edu.up.br.so.Entities.Sistema;
 
 public class Usuario {
 	private int id;
@@ -11,8 +12,9 @@ public class Usuario {
 	private String Cpf;
 	private String Email;
 	private String Senha;
-	private List<Permissao> permissoes;
-	
+	public List<Sistema> sistemas;
+	public List<Modules> modulos;
+
 	public int getId() {
 		return id;
 	}
@@ -44,33 +46,28 @@ public class Usuario {
 	public void setSenha(String senha) {
 		Senha = senha;
 	}
-	public List<Permissao> getPermissoes() {
-		return permissoes;
-	}
-	public void setPermissoes(List<Permissao> permissoes) {
-		this.permissoes = permissoes;
-	}
 	
 
-	public Usuario(int id, String nome, String cpf, String email, String senha, List<Permissao> permissoes) {
-		super();
+	public Usuario(int id, String nome, String cpf, String email, String senha, List<Sistema> permissoes) {
 		this.id = id;
 		Nome = nome;
 		Cpf = cpf;
 		Email = email;
 		Senha = senha;
-		this.permissoes = permissoes;
 	}
 	public Usuario() {
 		// TODO Auto-generated constructor stub
+	sistemas =new ArrayList<Sistema>();
+		 modulos = new ArrayList<Modules>();
+		
 	}
-	
 	@Override
 	public String toString() {
 		return "Usuario [id=" + id + ", Nome=" + Nome + ", Cpf=" + Cpf + ", Email=" + Email + ", Senha=" + Senha
-				+ ", permissoes=" + permissoes + "]";
+				+ ", sistemas=" + sistemas + ", modulos=" + modulos + "]";
 	}
 	
+
 	
 	
 }

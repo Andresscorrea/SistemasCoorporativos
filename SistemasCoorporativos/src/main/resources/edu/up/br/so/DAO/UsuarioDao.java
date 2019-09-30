@@ -3,6 +3,7 @@ package edu.up.br.so.DAO;
 import java.util.ArrayList;
 import java.util.List;
 
+import edu.up.br.so.Entities.Sistema;
 import edu.up.br.so.Entities.Usuario;
 
 public class UsuarioDao {
@@ -10,7 +11,7 @@ public class UsuarioDao {
 
 	public Usuario BuscarUsuario(String email) {
 
-		for (Usuario u : usuarios) {
+		for (Usuario u : this.usuarios) {
 			if (u.getEmail().equals(email)) {
 				return u;
 			}
@@ -20,12 +21,12 @@ public class UsuarioDao {
 	}
 
 	public Usuario CadastrarUsuario(Usuario usuario) {
-		if (this.BuscarUsuario(usuario.getEmail()).equals(null)) {
+		//if  (this.BuscarUsuario(usuario.getEmail()).equals(null)) {
 			usuarios.add(usuario);
 			return usuario;
-		} else {
-			return null;
-		}
+		//} else {
+		//	return null;
+		//}
 	}
 
 }
