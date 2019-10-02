@@ -20,6 +20,20 @@ public class UsuarioDao {
 
 	}
 
+	
+	public Usuario LoginUsuario(String email, String senha) {
+
+		for (Usuario u : this.usuarios) {
+			if (u.getEmail().equals(email) && u.getSenha().equals(senha)) {
+				
+				return u;
+			}
+		}
+		return null;
+
+	}
+	
+	
 	public Usuario CadastrarUsuario(Usuario usuario) {
 		//if  (this.BuscarUsuario(usuario.getEmail()).equals(null)) {
 			usuarios.add(usuario);

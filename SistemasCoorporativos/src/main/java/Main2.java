@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 import edu.up.br.so.DAO.ModuloDao;
 import edu.up.br.so.DAO.SistemaDao;
 import edu.up.br.so.DAO.TIpoAcessoDAO;
@@ -11,7 +8,7 @@ import edu.up.br.so.Entities.TipoAcesso;
 import edu.up.br.so.Entities.Usuario;
 import edu.up.com.Utils.teclado;
 
-public class main {
+public class Main2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -114,8 +111,7 @@ public class main {
 			default:
 				break;
 			}
-		}
-
 	}
 
+}
 }

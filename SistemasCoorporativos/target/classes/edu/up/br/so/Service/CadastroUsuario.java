@@ -23,7 +23,6 @@ public class CadastroUsuario {
 	@Context
 	private UriInfo uriInfo;
 	
-	public static List<Usuario> usuarios = new ArrayList<Usuario>();
 	@POST
 	@Path("/Cadastro")
 	@Consumes(MediaType.APPLICATION_JSON)
